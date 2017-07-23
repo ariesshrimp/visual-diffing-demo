@@ -3,14 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react": "15.6.1",
+    "react-dom": "15.6.1",
     "react-scripts": "1.0.10"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "build:storybook": "build-storybook",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "deploy:storybook": "storybook-to-ghpages",
+    "start:storybook": "start-storybook -p 6006",
+    "test": "react-scripts test --env=jsdom"
+  },
+  "devDependencies": {
+    "@percy-io/react-percy-storybook": "1.0.2",
+    "@storybook/addon-knobs": "3.1.8",
+    "@storybook/addon-storyshots": "3.1.8",
+    "@storybook/react": "3.1.8",
+    "@storybook/storybook-deployer": "2.0.0",
+    "react-test-renderer": "15.6.1"
   }
 }
